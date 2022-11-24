@@ -1,0 +1,40 @@
+PODS:
+  - NotificationToast (1.2.1)
+  - RongCloudIM/ChatRoom (5.3.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/CustomerService (5.3.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/Discussion (5.3.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/IMKit (5.3.1):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (5.3.1):
+    - RongCloudIM/ChatRoom
+    - RongCloudIM/CustomerService
+    - RongCloudIM/Discussion
+    - RongCloudIM/IMLibCore
+    - RongCloudIM/PublicService
+  - RongCloudIM/IMLibCore (5.3.1)
+  - RongCloudIM/PublicService (5.3.1):
+    - RongCloudIM/IMLibCore
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - NotificationToast
+  - RongCloudIM/IMKit (~> 5.3.1)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - NotificationToast
+    - RongCloudIM
+    - SnapKit
+
+SPEC CHECKSUMS:
+  NotificationToast: 1121ac0f1b89fae6c1031330dc2889107e23dc07
+  RongCloudIM: 869a9411f57b55ae9424b8253e299eff84f4d9bc
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 9b2a1844c17e14a918afa7dce8263a774a0caddf
+
+COCOAPODS: 1.11.3

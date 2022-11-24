@@ -1,0 +1,6 @@
+framework module NotificationToast {
+  umbrella header "NotificationToast-umbrella.h"
+
+  export *
+  module * { export * }
+}
