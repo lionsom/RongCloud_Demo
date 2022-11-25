@@ -54,6 +54,20 @@ extension AppDelegate {
         // 启用多端阅读状态同步
         RCKitConfig.default().message.enableSyncReadStatus = true
 
+        // 消息引用配置
+        RCKitConfig.default().message.enableMessageReference = true
+
+        // 消息撤回配置
+        RCKitConfig.default().message.enableMessageRecall = true
+        RCKitConfig.default().message.maxRecallDuration = 50 // 消息可撤回的最大时间，单位是秒，默认值是 120 秒，可配置。
+        RCKitConfig.default().message.reeditDuration = 20 // 消息撤回后可重新编辑的时间，单位是秒，默认值是 300 秒。仅文本消息支持撤回再编辑。
+
+        // 消息回执
+        RCKitConfig.default().message.enabledReadReceiptConversationTypeList = []
+
+        // @ 配置
+        RCKitConfig.default().message.enableMessageMentioned = false
+
         /*!
          是否支持暗黑模式，默认值是NO，开启之后 UI 支持暗黑模式，可以跟随系统切换
          @discussion 开启该属性后， 如果想控制 App 不随系统暗黑模式转变，请参考 https://support.rongcloud.cn/ks/MTE0Mg==
