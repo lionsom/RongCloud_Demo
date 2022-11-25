@@ -96,6 +96,8 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     // 连接成功,可跳转至会话列表页
                     let listVC = RCDConversationListViewController(displayConversationTypes: [1, 2], collectionConversationType: nil)
+                    // 是否显示网络连接提示，默认为 YES。
+                    listVC?.isShowNetworkIndicatorView = true
                     self.navigationController?.pushViewController(listVC!, animated: true)
                 }
             }

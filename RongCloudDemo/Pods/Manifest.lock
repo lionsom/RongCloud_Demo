@@ -1,4 +1,19 @@
 PODS:
+  - DoraemonKit/Core (3.0.7):
+    - FMDB
+    - GCDWebServer
+    - GCDWebServer/WebDAV
+    - GCDWebServer/WebUploader
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - GCDWebServer/WebDAV (3.5.4):
+    - GCDWebServer/Core
+  - GCDWebServer/WebUploader (3.5.4):
+    - GCDWebServer/Core
   - NotificationToast (1.2.1)
   - RongCloudIM/ChatRoom (5.3.1):
     - RongCloudIM/IMLibCore
@@ -20,21 +35,29 @@ PODS:
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - DoraemonKit/Core (~> 3.0.4)
   - NotificationToast
   - RongCloudIM/IMKit (~> 5.3.1)
   - SnapKit
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - DoraemonKit
+    - FMDB
+    - GCDWebServer
   trunk:
     - NotificationToast
     - RongCloudIM
     - SnapKit
 
 SPEC CHECKSUMS:
+  DoraemonKit: 32fb97f3aa82efa133111d193080ca5462cef135
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   NotificationToast: 1121ac0f1b89fae6c1031330dc2889107e23dc07
   RongCloudIM: 869a9411f57b55ae9424b8253e299eff84f4d9bc
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 9b2a1844c17e14a918afa7dce8263a774a0caddf
+PODFILE CHECKSUM: 6e38b274410bd8840268190927e77b3279acf8aa
 
 COCOAPODS: 1.11.3

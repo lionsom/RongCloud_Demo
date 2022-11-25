@@ -9,10 +9,21 @@ import NotificationToast
 import RongIMKit
 import UIKit
 
+#if DEBUG
+import DoraemonKit
+#endif
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        #if DEBUG
+        DoraemonManager.shareInstance().install()
+        #endif
+
+        // 融云配置
+        configRCIM()
 
         // 连接状态监听器，设置代理委托
         RCIM.shared().connectionStatusDelegate = self
@@ -32,6 +43,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+}
+
+extension AppDelegate {
+    func configRCIM() {
+        // 输入状态功能
+        RCKitConfig.default().message.enableTypingStatus = true
+
+        // 启用多端阅读状态同步
+        RCKitConfig.default().message.enableSyncReadStatus = true
+
+        /*!
+         是否支持暗黑模式，默认值是NO，开启之后 UI 支持暗黑模式，可以跟随系统切换
+         @discussion 开启该属性后， 如果想控制 App 不随系统暗黑模式转变，请参考 https://support.rongcloud.cn/ks/MTE0Mg==
+         */
+        RCKitConfig.default().ui.enableDarkMode = true
+
+        // 头像显示大小默认值为 46*46。注意高度必须大于或者等于 36
+        RCKitConfig.default().ui.globalConversationPortraitSize = CGSize(width: 40, height: 40)
+        RCKitConfig.default().ui.globalNavigationBarTintColor = .systemPink
+
+        // 设置头像为圆形
+        RCKitConfig.default().ui.globalMessageAvatarStyle = RCUserAvatarStyle.USER_AVATAR_CYCLE
+        RCKitConfig.default().ui.globalConversationAvatarStyle = RCUserAvatarStyle.USER_AVATAR_CYCLE
     }
 }
 

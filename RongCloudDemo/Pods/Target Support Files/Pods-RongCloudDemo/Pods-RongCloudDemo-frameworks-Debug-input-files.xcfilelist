@@ -1,4 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-RongCloudDemo/Pods-RongCloudDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework
+${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
+${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework
 ${BUILT_PRODUCTS_DIR}/NotificationToast/NotificationToast.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/RongCloudIM/ChatRoom/RongChatRoom.framework/RongChatRoom

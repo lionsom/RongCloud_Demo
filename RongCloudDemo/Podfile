@@ -1,5 +1,8 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '12.0'
 
 target 'RongCloudDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -11,4 +14,13 @@ target 'RongCloudDemo' do
   pod 'SnapKit'
   pod 'NotificationToast'
 
+  # Debug
+  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug']  #必选
+#  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] #可选
+#  pod 'DoraemonKit/WithGPS', '~> 3.0.4', :configurations => ['Debug'] #可选
+#  pod 'DoraemonKit/WithLoad', '~> 3.0.4', :configurations => ['Debug'] #可选
+#  pod 'DoraemonKit/WithWeex', '~> 3.0.4', :configurations => ['Debug'] #可选
+#  pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug'] #可选
+#  pod 'DoraemonKit/WithMLeaksFinder', '3.0.4', :configurations => ['Debug'] #可选
+  
 end
