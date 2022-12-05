@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-RongCloudDemo/Pods-RongCloudDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
 ${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework
 ${BUILT_PRODUCTS_DIR}/NotificationToast/NotificationToast.framework

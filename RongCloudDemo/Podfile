@@ -13,6 +13,7 @@ target 'RongCloudDemo' do
 
   pod 'SnapKit'
   pod 'NotificationToast'
+  pod 'Alamofire'
 
   # Debug
   pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug']  #必选
